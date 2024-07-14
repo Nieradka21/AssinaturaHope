@@ -1,0 +1,54 @@
+body {
+    background-image: url('../../assets/bg-hopelingerie.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end; /* Alinha à direita */
+    align-items: flex-start; /* Alinha ao topo */
+    min-height: 100vh; /* Garante que a página ocupe toda a altura visível */
+    overflow-x: hidden; /* Esconde a barra de rolagem horizontal */
+}
+
+.container {
+    width: 21cm; /* Largura equivalente a uma folha A4 */
+    height: 100vh; /* Altura equivalente à altura visível da tela */
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 20px; /* Espaçamento superior */
+    margin-right: 20px; /* Espaçamento à direita */
+    display: flex;
+    flex-direction: column; /* Alinha os elementos internos verticalmente */
+    align-items: center; /* Centraliza os elementos horizontalmente */
+    overflow-y: auto; /* Permite rolagem vertical dentro do container */
+    position: fixed; /* Fixa o container para não rolar com o corpo da página */
+}
+
+.logo {
+    background-color: #ffffff;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 10; /* Garante que o cabeçalho fique acima dos outros elementos */
+}
+
+.logo img {
+    max-width: 80%;
+    height: auto;
+}
+
+app-assinatura,
+app-formulario {
+    max-width: 100%; /* Ocupa toda a largura disponível */
+    width: 100%; /* Ocupa toda a largura disponível */
+    margin-top: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+}

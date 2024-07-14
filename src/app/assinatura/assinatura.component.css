@@ -1,0 +1,150 @@
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.signature-container {
+    max-width: 1000px; /* Define uma largura máxima */
+    padding: 10px; /* Espaçamento interno */
+    background-color: #ffffff; /* Cor de fundo branca */
+    border: 1px solid #ddd; /* Borda cinza */
+    border-radius: 5px; /* Borda arredondada */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra suave */
+    line-height: 1.6; /* Altura das linhas */
+    font-family: Arial, sans-serif; /* Fonte padrão */
+    font-size: 14px; /* Tamanho da fonte */
+    color: #7c7c7c; /* Cor do texto */
+    max-height: 188px; /* Altura máxima */
+    overflow: hidden; /* Oculta conteúdo que ultrapassa a altura */
+    margin-bottom: 20px; /* Espaçamento inferior */
+}
+
+.signature-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.signature-container table {
+    width: 100%; /* Ocupa toda a largura disponível */
+    table-layout: fixed; /* Fixa a largura das células */
+    border-collapse: collapse; /* Remove o espaçamento entre as células da tabela */
+    margin-bottom: 10px; /* Espaçamento inferior */
+}
+
+.signature-container table td,
+.signature-container table th {
+    padding: 3px; /* Reduz o espaçamento interno das células */
+    text-align: left; /* Alinhamento do texto à esquerda */
+    vertical-align: top; /* Alinhamento vertical no topo */
+    border: none; /* Remove as bordas */
+    line-height: 1; /* Ajusta a altura das linhas */
+}
+
+.signature-container table td {
+    text-align: left; /* Alinhamento do texto à esquerda */
+    vertical-align: top; /* Alinhamento vertical no topo */
+    border: none; /* Remove as bordas */
+    white-space: nowrap; /* Impede a quebra de linha */
+}
+
+.signature-container tr {
+    border: none; /* Remove as bordas entre as linhas */
+    margin: none;
+}
+
+.signature-container img.logo {
+    vertical-align: middle; /* Alinha verticalmente as imagens */
+    width: 100px; /* Largura das imagens */
+    height: auto; /* Altura automática */
+    margin-right: 10px; /* Espaçamento direita */
+}
+
+.logos-table {
+    width: 100%; /* Ocupa toda a largura disponível */
+    background-color: #000000; /* Cor de fundo dos logos */
+    border-collapse: collapse; /* Remove o espaçamento entre as células */
+    margin-right: 10px;
+}
+
+.logos-table td {
+    padding: 10px; /* Espaçamento interno das células */
+    font-family: Arial, sans-serif; /* Fonte Arial */
+}
+
+.logo {
+    vertical-align: middle; /* Alinha verticalmente as imagens */
+    width: auto; /* Largura automática */
+    max-width: 100px; /* Largura máxima das imagens */
+}
+
+.separator {
+    width: 1px; /* Largura da linha separadora */
+    background-color: #b1b1b1; /* Cor da linha separadora */
+    height: 100%; /* Altura total */
+}
+
+.signature-container table td.telefone {
+    padding: 5px; /* Espaçamento interno das células */
+    text-align: left; /* Alinhamento do texto à esquerda */
+    vertical-align: top; /* Alinhamento vertical no topo */
+    border: none; /* Remove as bordas */
+    margin: 0; /* Remove margens */
+    width: auto; /* Largura automática */
+    white-space: nowrap; /* Impede a quebra de linha */
+}
+
+.signature-container table td.ramal {
+    padding-left: 10px; /* Espaçamento à esquerda para separação */
+    text-align: left; /* Alinhamento do texto à esquerda */
+    vertical-align: top; /* Alinhamento vertical no topo */
+    border: none; /* Remove as bordas */
+    white-space: nowrap; /* Impede a quebra de linha */
+}
+
+
+.cargo{
+    color: rgba(60, 61, 63, 0.904);
+    font-size: 16px;
+    font-weight: bold;
+    
+}
+.nome{
+   color: rgba(60, 61, 63, 0.918);
+    font-size: 18px; 
+}
+
+.informacoes{
+color: rgb(133, 132, 135);
+font-size: 13px; 
+}
+.email{
+color: rgb(133, 132, 135);
+font-size: 13px; 
+}
+.endereco{
+    color: rgb(133, 132, 135);
+    font-size: 13px; 
+}
+
+.info-icon {
+    margin-right: 5px; /* Espaçamento entre o ícone e o texto */
+    vertical-align: middle; /* Alinha verticalmente o ícone */
+}
+
+.info-icon img {
+    width: 16px; /* Define largura do ícone */
+    height: 16px; /* Define altura do ícone */
+}
+.info-icon-email {
+    margin-right: 5px; /* Espaçamento entre o ícone e o texto */
+    vertical-align: middle; /* Alinha verticalmente o ícone */
+}
+
+.info-icon-email img {
+    width: 16px; /* Define largura do ícone */
+    height: 12px; /* Define altura do ícone */
+}

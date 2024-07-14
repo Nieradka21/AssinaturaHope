@@ -1,0 +1,65 @@
+<div class="container formulario-container">
+    <span class="titulo">
+        Preencha os campos abaixo e baixe a sua assinatura
+    </span>
+    <form>
+        <!-- Campos do formulário com [(ngModel)] para vinculação bidirecional -->
+        <div class="form-group">
+
+            <input placeholder=" " type="text" class="form-control no-border-bottom" id="nomeCompleto"
+                name="nomeCompleto" [(ngModel)]="formData.nomeCompleto" (input)="onInputChange()">
+            <label for="nomeCompleto">Nome Completo</label>
+            <div class="line"></div>
+        </div>
+        <div class="form-group">
+
+            <input placeholder=" " type="text" class="form-control no-border-bottom" id="cargo" name="cargo"
+                [(ngModel)]="formData.cargo" (input)="onInputChange()">
+            <label for="cargo">Cargo</label>
+            <div class="line"></div>
+        </div>
+        <div class="form-group">
+
+            <input placeholder=" " type="text" class="form-control no-border-bottom" id="area" name="area"
+                [(ngModel)]="formData.area" (input)="onInputChange()">
+            <label for="area">Área</label>
+            <div class="line"></div>
+        </div>
+        <div class="form-group">
+
+            <input placeholder=" " type="text" class="form-control no-border-bottom" id="ramal" name="ramal"
+                [(ngModel)]="formData.ramal" (input)="onInputChange()">
+            <label for="ramal">Ramal</label>
+            <div class="line"></div>
+        </div>
+        <div class="form-group">
+
+            <input placeholder=" " tabindex="0" mask="(00) 00000-0000" maxlength="15" type="text" class="form-control no-border-bottom" id="telefone" name="telefone"
+                [(ngModel)]="formData.telefone" (input)="onInputChange()">
+            <label for="telefone">Telefone (Opcional)</label>
+            <div class="line"></div>
+        </div>
+        <div class="form-group">
+
+            <input placeholder=" " type="email" class="form-control no-border-bottom" id="email" name="email"
+                [(ngModel)]="formData.email" (input)="onInputChange()">
+            <label for="email">E-mail</label>
+            <div class="line"></div>
+        </div>
+        <div class="form-group ">
+
+            <select class="form-control" id="endereco" name="endereco" [(ngModel)]="formData.selectedAddress"
+                (change)="onInputChange()">
+                <option value="Terraço Shopping - St SHC/AOS, Ea 02/08 - Loja 262">Brasília - Terraço Shopping</option>
+                <option value="Outro endereço completo">Outra Localização</option>
+            </select>
+
+            <label for="endereco">Endereço</label>
+            <div class="line"></div>
+
+
+        </div>
+        <div *ngIf="formData.selectedAddress" class="form-text text-muted">{{ formData.selectedAddress }}</div>
+    </form>
+    <button class="btn btn-primary btn-assinatura" (click)="generateSignatureImage()">Download da Assinatura</button>
+</div>

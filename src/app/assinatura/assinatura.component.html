@@ -1,0 +1,60 @@
+<div class="container mt-4">
+    <div class="signature-container" #signatureContainer>
+        <div class="signature-content">
+            <table class="table table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="nome">
+                            <strong>
+                                <b>
+                                    <span class="nome">
+                                        {{ formData.nomeCompleto ?
+                                        formData.nomeCompleto : 'NOME COMPLETO' }}
+                                    </span>
+                                </b>
+                            </strong>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="cargo">{{ formData.cargo ? formData.cargo : 'Cargo' }} | {{ formData.area ?
+                            formData.area : 'Área' }}</td>
+                    </tr>
+                    <tr>
+                        <td class="informacoes">
+                            <span class="info-icon">
+                                <img src="../../assets/phone.png" alt="Ícone de Informação">
+                            </span>
+                            {{ formData.autoTelefone | mask: '(00) 0000-0000' }}
+                            <span *ngIf="formData.ramal">R:{{ formData.ramal }}</span>
+                            <span *ngIf="formData.ramal && formData.telefone"> | </span>
+                            {{ formData.telefone | mask: '(00) 00000-0000' }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="email">
+                            <span class="info-icon-email">
+                                <img src="../../assets/email.png" alt="Ícone de Informação">
+                            </span>
+                            {{ formData.email ? formData.email : 'seuemail@grupohope.com.br' }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="endereco">{{ formData.selectedAddress }}</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <table class="logos-table">
+                <tbody>
+                    <tr>
+                        <td><img src="../../assets/esperanca.png" alt="Esperança" class="logo"></td>
+                        <td><img src="../../assets/grupo-hope-logo.png" alt="Grupo Hope Logo" class="logo"></td>
+                        <td><img src="../../assets/bonjour-logo.png" alt="Bonjour Logo" class="logo"></td>
+                        <td><img src="../../assets/hope-logo.png" alt="Hope Logo" class="logo"></td>
+                        <td><img src="../../assets/hope-resort-logo.png" alt="Hope Resort Logo" class="logo"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
