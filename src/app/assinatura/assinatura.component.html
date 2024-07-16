@@ -19,15 +19,16 @@
                         <td class="cargo">{{ formData.cargo ? formData.cargo : 'Cargo' }} | {{ formData.area ?
                             formData.area : 'Área' }}</td>
                     </tr>
-                    <tr>
+                    <tr *ngIf="formData.ramal || formData.telefone || formData.celular">
                         <td class="informacoes">
                             <span class="info-icon">
                                 <img src="../../assets/phone.png" alt="Ícone de Informação">
                             </span>
-                            {{ formData.autoTelefone | mask: '(00) 0000-0000' }}
+                            {{ formData.celular | mask: '(00) 00000-0000' }}
+
+                            <span *ngIf="formData.ramal && formData.celular"> | </span>
+                            {{ formData.telefone | mask: '(00) 0000-0000' }}
                             <span *ngIf="formData.ramal">R:{{ formData.ramal }}</span>
-                            <span *ngIf="formData.ramal && formData.telefone"> | </span>
-                            {{ formData.telefone | mask: '(00) 00000-0000' }}
                         </td>
                     </tr>
                     <tr>
@@ -44,14 +45,16 @@
                 </tbody>
             </table>
 
-            <table class="logos-table">
+            <table class="logos-table-hope">
                 <tbody>
                     <tr>
-                        <td><img src="../../assets/esperanca.png" alt="Esperança" class="logo"></td>
-                        <td><img src="../../assets/grupo-hope-logo.png" alt="Grupo Hope Logo" class="logo"></td>
-                        <td><img src="../../assets/bonjour-logo.png" alt="Bonjour Logo" class="logo"></td>
-                        <td><img src="../../assets/hope-logo.png" alt="Hope Logo" class="logo"></td>
-                        <td><img src="../../assets/hope-resort-logo.png" alt="Hope Resort Logo" class="logo"></td>
+                        <td><img src="../../assets/esperanca.png" alt="Esperança" class="logo esperanca"></td>
+                        <td><img src="../../assets/grupo-hope-logo.png" alt="Grupo Hope Logo" class="logo grupohope">
+                        </td>
+                        <td><img src="../../assets/bonjour-logo.png" alt="Bonjour Logo" class="logo bonjuor"></td>
+                        <td><img src="../../assets/hope-logo.png" alt="Hope Logo" class="logo hope"></td>
+                        <td><img src="../../assets/hoperesortfundo.png" alt="Hope Resort Logo" class="logo hoperesort">
+                        </td>
                     </tr>
                 </tbody>
             </table>

@@ -17,8 +17,8 @@ export class FormularioComponent implements OnInit {
     ramal: '',
     telefone: '',
     email: '',
-    selectedAddress: 'Terraço Shopping - St SHC/AOS, Ea 02/08 - Loja 262',
-    autoTelefone:''
+    selectedAddress: 'Av. Francisco Matarazzo, 1350 - Torre 1 - 18° andar - Água Branca - São Paulo - SP, 05001-100',
+    celular:''
   };
 
   constructor(
@@ -28,24 +28,25 @@ export class FormularioComponent implements OnInit {
 
   ngOnInit() {
     
-    this.updateAutoTelefone();
     this.sharedDataService.setFormData(this.formData);
     
   }
 
   onInputChange() {
     // Atualiza os dados no serviço compartilhado
-   this.updateAutoTelefone();
+
     this.sharedDataService.setFormData(this.formData);
   }
 
+  /*
     updateAutoTelefone() {
-    if (this.formData.selectedAddress === 'Terraço Shopping - St SHC/AOS, Ea 02/08 - Loja 262') {
+      if (this.formData.selectedAddress === 'Av. Francisco Matarazzo, 1350 - Torre 1 - 18° andar - Água Branca - São Paulo - SP, 05001-100') {
       this.formData.autoTelefone = '1121692204';
     } else {
       this.formData.autoTelefone = '';
     }
   }
+  */
 
   generateSignatureImage() {
     const signatureContainerRef = this.signatureService.getSignatureContainerRef();

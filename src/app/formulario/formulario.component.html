@@ -34,9 +34,18 @@
         </div>
         <div class="form-group">
 
-            <input placeholder=" " tabindex="0" mask="(00) 00000-0000" maxlength="15" type="text" class="form-control no-border-bottom" id="telefone" name="telefone"
-                [(ngModel)]="formData.telefone" (input)="onInputChange()">
+            <input placeholder=" " tabindex="0" mask="(00) 00000-0000" maxlength="15" type="text"
+                class="form-control no-border-bottom" id="telefone" name="telefone" [(ngModel)]="formData.telefone"
+                (input)="onInputChange()">
             <label for="telefone">Telefone (Opcional)</label>
+            <div class="line"></div>
+        </div>
+        <div class="form-group">
+
+            <input placeholder=" " tabindex="0" mask="(00) 00000-0000" maxlength="15" type="text"
+                class="form-control no-border-bottom" id="celular" name="celular" [(ngModel)]="formData.celular"
+                (input)="onInputChange()">
+            <label for="celular">Celular (Opcional)</label>
             <div class="line"></div>
         </div>
         <div class="form-group">
@@ -50,8 +59,14 @@
 
             <select class="form-control" id="endereco" name="endereco" [(ngModel)]="formData.selectedAddress"
                 (change)="onInputChange()">
-                <option value="Terraço Shopping - St SHC/AOS, Ea 02/08 - Loja 262">Brasília - Terraço Shopping</option>
-                <option value="Outro endereço completo">Outra Localização</option>
+                <option value="Av. Francisco Matarazzo, 1350 - Torre 1 - 18° andar - Água Branca - São Paulo - SP, 05001-100">São Paulo - Central Grupo Hope</option>
+                <option value="Avenida Ibirapuera, 3102 - São Paulo - SP, 04029-902">São Paulo - Ibirapuera</option>
+                <option value="Rua Oscar Freire, 791 - São Paulo - SP, 01426-003">São Paulo - Oscar Freire</option>
+                <option value="Av. Roque Petroni Júnior, 1089 - Loja 112 - São Paulo - SP, 04707-900">São Paulo - Morumbi</option>
+                <option value="Av Higienopolis 698 - Loja 214 - São Paulo - SP, 01238-000">São Paulo - Hope Resort Higienopolis</option>
+                <option value="Avenida das Américas 4666/loja 133B - BarraShopping - Barra da Tijuca, Rio de Janeiro - RJ, 22640-102">São Paulo - Hope Resort Barra Shopping</option>
+                <option value="Rua Dr. Argeu Braga Herbster, 610 - Outra Banda - Maranguape - CE, 61942-005">Ceará - Maranguape</option>
+                <option value="Rua Dona Ana Pimentel, 247 - Água Branca - São Paulo - SP, 05002-040">São Paulo - Ateliê</option>
             </select>
 
             <label for="endereco">Endereço</label>
