@@ -26,7 +26,7 @@
                             </span>
                             {{ formData.celular | mask: '(00) 00000-0000' }}
 
-                            <span *ngIf="formData.ramal && formData.celular"> | </span>
+                            <span *ngIf="formData.celular && formData.telefone"> | </span>
                             {{ formData.telefone | mask: '(00) 0000-0000' }}
                             <span *ngIf="formData.ramal">R:{{ formData.ramal }}</span>
                         </td>
