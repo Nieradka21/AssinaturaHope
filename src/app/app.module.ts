@@ -8,13 +8,15 @@ import { FormularioComponent } from './formulario/formulario.component';
 import { FormsModule } from '@angular/forms';
 import { AssinaturaComponent } from './assinatura/assinatura.component';
 import { NgxMaskDirective, NgxMaskPipe, provideNgxMask } from 'ngx-mask';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     FormularioComponent,
-    AssinaturaComponent
+    AssinaturaComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
