@@ -1,4 +1,4 @@
-name: Azure Static Web Apps CI/CD
+Azure Static Web Apps CI/CD
 
 on:
   push:
@@ -31,17 +31,17 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      # Instala o Angular CLI localmente
-      - name: Install Angular CLI locally
-        run: npm install @angular/cli
+      # Instala o Angular CLI globalmente
+      - name: Install Angular CLI
+        run: npm install -g @angular/cli
 
       # Dá permissão para rodar o Angular CLI
       - name: Ensure Angular CLI has execution permissions
-        run: chmod +x $(npm bin)/ng
+        run: chmod +x ./node_modules/.bin/ng
 
       # Faz o build da aplicação Angular
       - name: Build Angular app
-        run: npx ng build --configuration production
+        run: ng build --configuration production
 
       # Build e deploy para o Azure Static Web Apps
       - name: Build And Deploy
