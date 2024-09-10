@@ -26,7 +26,7 @@ jobs:
       - name: Install Dependencies
         run: npm ci
       - name: Build Project
-        run: npx ng build --configuration production
+        run: ./node_modules/.bin/ng build --configuration production
       - name: Build And Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
