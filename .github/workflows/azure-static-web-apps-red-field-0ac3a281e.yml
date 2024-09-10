@@ -35,10 +35,6 @@ jobs:
       - name: Install Angular CLI
         run: npm install -g @angular/cli
 
-      # Dá permissão para rodar o Angular CLI
-      - name: Ensure Angular CLI has execution permissions
-        run: chmod +x ./node_modules/.bin/ng
-
       # Faz o build da aplicação Angular
       - name: Build Angular app
         run: ng build --configuration production
