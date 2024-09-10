@@ -54,7 +54,7 @@ jobs:
           ###### Configurações do repositório e build ######
           app_location: "/" # Caminho para o código-fonte da aplicação
           api_location: "" # Caminho para o código-fonte da API (opcional)
-          output_location: "dist/hope" # Diretório de saída do build
+          output_location: "dist/hope/browser" # Diretório de saída do build
           ###### Fim das Configurações ######
 
   close_pull_request_job:
