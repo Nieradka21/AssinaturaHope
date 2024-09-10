@@ -41,7 +41,7 @@ jobs:
 
       # Faz o build da aplicação Angular
       - name: Build Angular app
-        run: ng build --prod
+        run: ng build 
 
       # Build e deploy para o Azure Static Web Apps
       - name: Build And Deploy
