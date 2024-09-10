@@ -25,7 +25,7 @@ jobs:
         run: npm install
 
       - name: Install Angular CLI
-        run: npm install -g @angular/cli
+        run: npm install -g @angular/cli@17.3.0
 
       - name: Build Angular app
         run: ng build --configuration production --base-href "/"
