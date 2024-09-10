@@ -19,6 +19,30 @@ jobs:
         with:
           submodules: true
           lfs: false
+      
+      # Instalar dependências do Node.js
+      - name: Set up Node.js environment
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16.x'  # Certifique-se de usar a versão correta do Node.js para o seu projeto
+
+      # Instalar as dependências do projeto
+      - name: Install dependencies
+        run: npm install
+
+      # Instalar Angular CLI globalmente
+      - name: Install Angular CLI
+        run: npm install -g @angular/cli
+
+      # Garantir permissão para executar o comando ng
+      - name: Grant permission to run ng
+        run: chmod +x ./node_modules/.bin/ng
+
+      # Executar o build da aplicação Angular
+      - name: Build the Angular app
+        run: ng build --prod
+
+      # Build e Deploy para o Azure Static Web Apps
       - name: Build And Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
@@ -26,12 +50,9 @@ jobs:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_NICE_MOSS_0CEDE0C1E }}
           repo_token: ${{ secrets.GITHUB_TOKEN }} # Used for Github integrations (i.e. PR comments)
           action: "upload"
-          ###### Repository/Build Configurations - These values can be configured to match your app requirements. ######
-          # For more information regarding Static Web App workflow configurations, please visit: https://aka.ms/swaworkflowconfig
           app_location: "/" # App source code path
           api_location: "" # Api source code path - optional
           output_location: "dist/hope" # Built app content directory - optional
-          ###### End of Repository/Build Configurations ######
 
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
